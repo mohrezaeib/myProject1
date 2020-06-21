@@ -1,13 +1,18 @@
 
 <nav class="navbar navbar-expand-md navbar-dark bg-dark">
-  <a href="#" class="navbar-brand"><img class="img-responsive "  height="28" [src]="nav.logo.logoSrc" [alt]="nav.logo.logoAlt"></a>
+  <a href="#" class="navbar-brand"><img class="img-responsive " src="assets/images/logo.png" height="30"></a>
   <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
     <span class="navbar-toggler-icon"></span>
   </button>
 
   <div class="collapse navbar-collapse" id="navbarCollapse">
     <div class="navbar-nav">
-      <a *ngFor="let link of nav.list"[href]="link.itemUrl" class="nav-item nav-link ">{{link.itemName}}</a>
+
+      <li><a routerLink="/home" routerLinkActive="active" class=" nav-item nav-link ">Home</a> </li>
+      <a routerLink="/products" routerLinkActive="active" class="nav-item nav-link ">Products</a>
+      <a routerLink="/contact-us" routerLinkActive="active" class="nav-item nav-link ">Contact Us</a>
+      <a routerLinkActive="active"  routerLink="/login" class="nav-item nav-link ">Login</a>
+
 
     </div>
     <form class="form-inline ml-auto">

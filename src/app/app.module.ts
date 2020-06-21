@@ -13,6 +13,10 @@ import { ProductDeatilComponent } from './components/productPage/product-deatil/
 import { ContactFormComponent } from './components/ContactPage/contact-form/contact-form.component';
 import { HomeComponent } from './components/home/home.component';
 
+import { LoginComponent } from './components/loginPage/login/login.component';
+import { WarrantyComponent } from './components/warrantyPage/warranty/warranty.component';
+import {AppRoutingModule} from './app-routing.module';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -25,11 +29,14 @@ import { HomeComponent } from './components/home/home.component';
     SearchBarComponent,
     ProductDeatilComponent,
     ContactFormComponent,
-    HomeComponent
+    HomeComponent,
+    LoginComponent,
+    WarrantyComponent
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
