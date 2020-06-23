@@ -1,0 +1,10 @@
+.row {
+  /*background-image: url("assets/images/back1.jpg");*/
+  background-image: url("/assets/images/back1.jpg");
+  background-repeat: no-repeat;
+  background-clip: border-box;
+  background-attachment: fixed;
+  background-position-x: center;
+  background-size: cover;
+  min-height: 100vh;
+}

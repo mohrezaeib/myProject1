@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import {DataService} from '../../../sevices/data.service';
+import {Product} from '../../../models/product';
 
 @Component({
   selector: 'app-product',
@@ -6,10 +8,23 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./product.component.css']
 })
 export class ProductComponent implements OnInit {
+  products: Product[] = [];
 
-  constructor() { }
+  constructor(private dataService: DataService) {
+
+  }
 
   ngOnInit(): void {
+    /*this.dataService.getProduct().subscribe(
+      (result: Product) => {
+        console.log(result.productName);
+      }
+    );*/
+    this.products = [
+      {productID : 1, productDetail :"product detail ",productName:"Name " , productImage:'assets/images/pro.png'},
+      {productID : 1, productDetail :"product detail ",productName:"Name " , productImage:"assets/images/pro.png"},
+      {productID : 1, productDetail :"product detail ",productName:"Name " , productImage:"assets/images/pro.png"}
+    ];
   }
 
 }

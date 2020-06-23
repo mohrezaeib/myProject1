@@ -6,7 +6,7 @@ import { NavigationComponent } from './components/navigation/navigation.componen
 import { SliderComponent } from './components/header/slider/slider.component';
 import { ProductComponent } from './components/featuredProduct/product/product.component';
 import { ProductRowComponent } from './components/featuredProduct/product-row/product-row.component';
-import { CompanyHistoryComponent } from './components/company-history/company-history.component';
+
 import { FooterComponent } from './components/footer/footer.component';
 import { SearchBarComponent } from './components/productPage/search-bar/search-bar.component';
 import { ProductDeatilComponent } from './components/productPage/product-deatil/product-deatil.component';
@@ -17,6 +17,9 @@ import { LoginComponent } from './components/loginPage/login/login.component';
 import { WarrantyComponent } from './components/warrantyPage/warranty/warranty.component';
 import {AppRoutingModule} from './app-routing.module';
 
+import { CompanyDescriptionComponent } from './components/company-description/company-description.component';
+import {FormsModule} from '@angular/forms';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -24,19 +27,23 @@ import {AppRoutingModule} from './app-routing.module';
     SliderComponent,
     ProductComponent,
     ProductRowComponent,
-    CompanyHistoryComponent,
+
     FooterComponent,
     SearchBarComponent,
     ProductDeatilComponent,
     ContactFormComponent,
     HomeComponent,
     LoginComponent,
-    WarrantyComponent
+    WarrantyComponent,
+    CompanyDescriptionComponent,
+
+
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

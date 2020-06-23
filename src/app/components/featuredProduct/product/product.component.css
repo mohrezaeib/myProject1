@@ -1,3 +1,19 @@
 div{
   background-color: #dddddd;
 }
+.single-product {
+  overflow: hidden;
+  padding:20px;
+
+
+}
+
+.inside-product img{
+  width: 80%;
+  margin:auto;
+
+}
+.inside-product{
+
+  align-content: center;
+}
