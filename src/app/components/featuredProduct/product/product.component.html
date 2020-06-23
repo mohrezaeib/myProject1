@@ -5,8 +5,15 @@
       <div>
         <h3>{{product.productName}}</h3>
           {{product.productDetail}}
+
+
       </div>
-      <a [routerLink]="['/products']" [queryParams]="{id:1}">More</a>
+      <a class="button-text" [routerLink]="['/products']" [queryParams]="{id:1}">
+        <svg class="button-svg" height="100%" width="100%" viewBox="0 0 1000 1000" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+          <polygon class="button-shape" points="16 83 984 83 943 917 16 917" stroke="#E1261C" vector-effect="non-scaling-stroke" style="stroke-dasharray: 1264px, 0px; stroke-dashoffset: -316px; --dashoffset-hover:-826px; --dasharray-hover:298px,1264px;"></polygon>
+        </svg>
+        More
+        <i class="fa fa-long-arrow-right" aria-hidden="true"></i></a>
     </div>
   </div>
 
