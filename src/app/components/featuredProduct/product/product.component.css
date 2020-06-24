@@ -1,4 +1,10 @@
-.inside-product{
+.single-product:first-child{
+  background-color: #dedede69;
+}
+.single-product:nth-child(2){
+  background-color: #dedede99;
+}
+.single-product:nth-child(3){
   background-color: #dddddd;
 }
 .single-product {
@@ -17,15 +23,12 @@
 
   align-content: center;
 }
-body {
-  background: #0f1923;
-  font-family: "Muli";
-}
+
 
 .buuu {
   display: -webkit-box;
   display: flex;
-  height: 100vh;
+
   -webkit-box-align: center;
   align-items: center;
   -webkit-box-pack: center;
@@ -132,7 +135,7 @@ body {
   color: #ece8e1;
 }
 .buuu a:hover span.bg {
-  width: 110%;
+  width: 100% !important;
 }
 .buuu a:hover span.text:after {
   background: #ece8e1;
