@@ -9,11 +9,12 @@ import {Regions} from 'src/app/models/regions';
   styleUrls: ['./company-description.component.css']
 })
 export class CompanyDescriptionComponent implements OnInit {
-  regions: Regions[] ;
   // countryForm: FormGroup;
 
 
   constructor() { }
+  regions: Regions[] ;
+  options = ['op1', 'op2', 'op3'];
 
   ngOnInit(): void {
     // this.fb.group({
@@ -30,4 +31,4 @@ export class CompanyDescriptionComponent implements OnInit {
     //   ];
   }
 
-}
+ }
