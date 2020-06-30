@@ -18,7 +18,7 @@ import { WarrantyComponent } from './components/warrantyPage/warranty/warranty.c
 import {AppRoutingModule} from './app-routing.module';
 
 import { CompanyDescriptionComponent } from './components/company-description/company-description.component';
-import {FormsModule} from '@angular/forms';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -43,7 +43,8 @@ import {FormsModule} from '@angular/forms';
     BrowserModule,
     HttpClientModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

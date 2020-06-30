@@ -1,48 +1,66 @@
 <div class="row">
-
-  <div class="col-md-6">
-    <h3>Treasure Talk</h3>
-    Our Treasure Talk bloggers share their product knowledge, detecting experience, personal tips and tricks.
-
-    <button >JOIN THE CONVERSATION</button>
-  </div>
-  <div class="col-md-6">
-    <!--<form >
+<div class="col-md-6">
+  <div class="form-container">
 
 
-    <h3>Where to Buy</h3>
-    <ng-template *ngFor="let region of regions">
-      <select formControlName="countryControl">
-      <option   *ngFor="let region of regions" [ngValue]="region">{{region.regionName}}</option>
-      </select>
-    </ng-template>
-    </form>-->
-    <form class="col-md-12" #userForm="ngForm">
-      {{userForm.value| json}}
-      <div class="form-group">
-          <label class="" >Name</label>
-        <input type="tetx" class="form-control" name="userName" ngModel>
+        <h3>Subscribe to our newsletter for update on our new products.</h3>
+
+
+    <form class="container" ngForm #f='ngForm'>
+      <div class="form-group  ">
+        <label class="col-sm-2" for="username">Name</label>
+        <input class="form-control col-sm-9 "
+               type="text"
+               name="username"
+               id="username"
+               #username="ngModel"
+               ngModel required>
+        <p class=""
+           *ngIf="username.touched && !username.valid">
+          Please Provide a Name
+        </p>
       </div>
-      <div class="form-group">
-        <label class="">Email</label>
-        <input type="email" class="form-control" name="email" ngModel >
+      <div class="form-group  ">
+        <label class="col-sm-2" for="email">Email</label>
+        <input class="form-control col-sm-9 "
+               email
+               type="email" #email="ngModel"
+               name="email"  id="email"
+               ngModel required>
+        <p class=""
+           *ngIf="email.touched && !email.valid">
+          Please Provide a valid Email
+        </p>
       </div>
-      <div class="form-check">
+      <div class="" >
+        <button class="btn btn-info" type="button" (click)="onSubscribe()">Subscribe</button>
+      </div>
+<!--      <select name="regionSelect" #regionSelect="ngModel" ngModel>-->
+<!--        <option>Select region</option>-->
+<!--        <option *ngFor="let region of regions; "  [value]="region"  >{{region.regionName}}</option>-->
 
-        <input type="radio" class="form-check-input"  value="male"  name="gender" ngModel>
-        <label class="form-check-label">Male</label>
-      </div>
-        <div class="form-check">
-
-        <input type="radio" class="form-check-input"  value="female"  name="gender" ngModel>
-        <label class="form-check-label">Female</label>
-      </div>
-      <div >
-        <select class="custom-select" ngModel name="option" >
-          <option *ngFor="let option of options">{{option}}</option>
+<!--      </select>-->
+<!--      <p *ngIf="regionSelect.value" >-->
+<!--        <span *ngFor="let country of regionSelect.value.countries ">-->
+<!--          {{country}}-->
+<!--        </span>-->
+<!--        {{regions[0]}}-->
+<!--      </p>-->
+    </form>
+    <form [formGroup]="countryForm" (ngSubmit)="countryShow()">
+        <select formControlName="regionSelector"  #regionSelector >
+          <option *ngFor="let region of regions" [value]="region.regionName">{{region.regionName}}</option>
+        </select>
+      <div *ngIf="countryForm.get('regionSelector').value">
+          {{ selectedRegion.regionName}}
+        <select formControlName="countrySelector"  #countrySelector >
+          <option *ngFor="let country of selectedRegion.countries" [value]="country.countryName">{{country.countryName}}</option>
         </select>
       </div>
-      <button type="submit" class="btn btn-success">Submit</button>
+
+      <button type="submit">submit</button>
     </form>
   </div>
+</div>
+
 </div>

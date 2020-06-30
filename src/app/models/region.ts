@@ -1,4 +1,4 @@
-export class Regions {
+export class Region {
 
   regionName: string;
   countries: {

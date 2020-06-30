@@ -6,17 +6,17 @@ import {HomeComponent} from './components/home/home.component';
 import {NgModule} from '@angular/core';
 import {LoginComponent} from './components/loginPage/login/login.component';
 import {WarrantyComponent} from './components/warrantyPage/warranty/warranty.component';
-const appRouts: Routes =[
-  {path:'products', component: ProductRowComponent},
+const appRouts: Routes = [
+  {path: 'products', component: ProductRowComponent},
   {path: 'contact-us', component: ContactFormComponent},
-  {path:'login', component:LoginComponent},
-  {path:'warranty',component:WarrantyComponent},
-  {path:'', redirectTo:'/home' , pathMatch:'full'},
-  {path:'home', component:HomeComponent}
-]
+  {path: 'login', component: LoginComponent},
+  {path: 'warranty', component: WarrantyComponent},
+  {path: '', redirectTo: '/home' , pathMatch: 'full'},
+  {path: 'home', component: HomeComponent}
+];
 @NgModule({
-  imports:[RouterModule.forRoot((appRouts))],
-  exports:[RouterModule]
+  imports: [RouterModule.forRoot((appRouts))],
+  exports: [RouterModule]
 
 })
 export class AppRoutingModule{
