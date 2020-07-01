@@ -29,18 +29,16 @@ export class CompanyDescriptionComponent implements OnInit {
   ]
   }];
   countryForm: FormGroup;
-  options = ['op1', 'op2', 'op3'];
-  constructor() { }
+  constructor() {
+  }
   ngOnInit(): void {
       this.countryForm = new FormGroup({
         regionSelector: new FormControl(null, [Validators.required] ),
         countrySelector: new FormControl(null),
       });
       this.countryForm.get('regionSelector').valueChanges.subscribe((value) => {
-      if (value) { console.log(value);
-                   this.selectedRegion = this.regions.filter(r => r.regionName === value)[0] ;
+      if (value) {this.selectedRegion = this.regions.filter(r => r.regionName === value)[0] ;
       }
-      else {console.log('status'); }
     });
 
   }
@@ -51,7 +49,5 @@ export class CompanyDescriptionComponent implements OnInit {
       this.subscribeForm.reset();
     }
     }
-  countryShow(){
-    console.log(this.countryForm);
-  }
+
  }

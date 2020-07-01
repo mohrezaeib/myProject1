@@ -1,11 +1,14 @@
 <div class="row">
 <div class="col-md-6">
-  <div class="form-container">
+  <div class="promo-container">
 
 
-        <h3>Subscribe to our newsletter for update on our new products.</h3>
+        <h3>Subscribe To Our Newsletter For Update On Our New Products.</h3>
 
-
+  </div>
+</div>
+  <div class="col-md-6">
+    <div class="form-container">
     <form class="container" ngForm #f='ngForm'>
       <div class="form-group  ">
         <label class="col-sm-2" for="username">Name</label>
@@ -33,34 +36,38 @@
         </p>
       </div>
       <div class="" >
-        <button class="btn btn-info" type="button" (click)="onSubscribe()">Subscribe</button>
+        <button class="buttonN" type="button" (click)="onSubscribe()">Subscribe</button>
       </div>
-<!--      <select name="regionSelect" #regionSelect="ngModel" ngModel>-->
-<!--        <option>Select region</option>-->
-<!--        <option *ngFor="let region of regions; "  [value]="region"  >{{region.regionName}}</option>-->
-
-<!--      </select>-->
-<!--      <p *ngIf="regionSelect.value" >-->
-<!--        <span *ngFor="let country of regionSelect.value.countries ">-->
-<!--          {{country}}-->
-<!--        </span>-->
-<!--        {{regions[0]}}-->
-<!--      </p>-->
     </form>
-    <form [formGroup]="countryForm" (ngSubmit)="countryShow()">
-        <select formControlName="regionSelector"  #regionSelector >
+  </div>
+</div>
+<div class="col-md-6">
+  <div class="promo-container">
+  <h3>Find Dealer in Your Country</h3>
+  </div>
+</div>
+  <div class="col-md-6">
+    <div class="form-container">
+  <form [formGroup]="countryForm" >
+      <div class="form-group dropdown-container">
+        <label for="region">Select region</label>
+        <select formControlName="regionSelector" [ngModel]="'0'"  id="region" #regionSelector  class="form-control">
+          <option [value]="'0'" [selected]="true">Select a Region</option>
           <option *ngFor="let region of regions" [value]="region.regionName">{{region.regionName}}</option>
         </select>
-      <div *ngIf="countryForm.get('regionSelector').value">
-          {{ selectedRegion.regionName}}
-        <select formControlName="countrySelector"  #countrySelector >
+
+      </div>
+      <div *ngIf="!(countryForm.get('regionSelector').value==='0')" class="form-group">
+        <label for="region">Select Country</label>
+
+        <select formControlName="countrySelector" [ngModel]="'0'"  #countrySelector  class="form-control">
+          <option  [value]="'0'"> Select A Country</option>
           <option *ngFor="let country of selectedRegion.countries" [value]="country.countryName">{{country.countryName}}</option>
         </select>
       </div>
 
-      <button type="submit">submit</button>
+      <button  class="buttonN" type="submit">Find Dealers</button>
     </form>
-  </div>
 </div>
-
+</div>
 </div>
