@@ -1,13 +1,13 @@
 import {NgModel} from '@angular/forms';
 import {Routes, RouterModule} from '@angular/router';
-import {ProductRowComponent} from './components/featuredProduct/product-row/product-row.component';
 import {ContactFormComponent} from './components/ContactPage/contact-form/contact-form.component';
 import {HomeComponent} from './components/home/home.component';
 import {NgModule} from '@angular/core';
 import {LoginComponent} from './components/loginPage/login/login.component';
 import {WarrantyComponent} from './components/warrantyPage/warranty/warranty.component';
+import {ProductPageComponent} from './components/productPage/product-page/product-page.component';
 const appRouts: Routes = [
-  {path: 'products', component: ProductRowComponent},
+  {path: 'products', component: ProductPageComponent},
   {path: 'contact-us', component: ContactFormComponent},
   {path: 'login', component: LoginComponent},
   {path: 'warranty', component: WarrantyComponent},

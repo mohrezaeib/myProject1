@@ -5,7 +5,6 @@ import { AppComponent } from './app.component';
 import { NavigationComponent } from './components/navigation/navigation.component';
 import { SliderComponent } from './components/header/slider/slider.component';
 import { ProductComponent } from './components/featuredProduct/product/product.component';
-import { ProductRowComponent } from './components/featuredProduct/product-row/product-row.component';
 
 import { FooterComponent } from './components/footer/footer.component';
 import { SearchBarComponent } from './components/productPage/search-bar/search-bar.component';
@@ -19,6 +18,8 @@ import {AppRoutingModule} from './app-routing.module';
 
 import { CompanyDescriptionComponent } from './components/company-description/company-description.component';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import { ProductPageComponent } from './components/productPage/product-page/product-page.component';
+import { SingleProductPageComponent } from './components/productPage/single-product-page/single-product-page.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,6 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
     NavigationComponent,
     SliderComponent,
     ProductComponent,
-    ProductRowComponent,
 
     FooterComponent,
     SearchBarComponent,
@@ -36,6 +36,8 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
     LoginComponent,
     WarrantyComponent,
     CompanyDescriptionComponent,
+    ProductPageComponent,
+    SingleProductPageComponent,
 
 
   ],

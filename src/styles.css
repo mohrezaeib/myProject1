@@ -7,6 +7,7 @@
   object-fit: cover;
 }
 
-body{
-  position: relative;
+body,
+html {
+  height: 100%;
 }
