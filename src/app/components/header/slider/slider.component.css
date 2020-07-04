@@ -1,197 +1,197 @@
-.sticky{
-  position: fixed;
-  top: 0;
-  width: 100%;
-  z-index: 500;
-}
+/*.sticky{*/
+/*  position: fixed;*/
+/*  top: 0;*/
+/*  width: 100%;*/
+/*  z-index: 500;*/
+/*}*/
 
 
-/****************  header css ***************/
-/* nav ************/
-.navigation {
-  z-index: 999;
-  position: relative;
-  padding: 35px 0;
-}
-.navigation .sf-menu {
-  z-index: 990;
-  text-align: center;
-  position: relative;
-}
-.navigation nav {
-  position: relative;
-  padding: 0;
-}
-.select-menu {
-  display: none !important;
-}
-.sf-menu ul {
-  position: absolute;
-  top: -999px;
-  display: none;
-}
-.sf-menu > li > ul > li {
-  float: none;
-  position: static;
-}
-.sf-menu > li {
-  float: left;
-  font-weight: 300;
-  position: relative;
-  font-size: 18px;
-  line-height: 22px;
-}
-.sf-menu > li + li {
-  margin-left: 43px;
-}
-.sf-menu > li + li:after {
-  content: '';
-  background:  0 0 no-repeat;
-  height: 5px;
-  width: 5px;
-  position: absolute;
-  left: -20px;
-  top: 10px;
-}
-.sf-menu > li > a {
-  position: relative;
-  color: #ffffff;
-  text-align: center;
-}
-.sf-menu > li > a.sf-with-ul:after {
-  content: '';
-  position: absolute;
-  width: 5px;
-  bottom: 15px;
-  left: 50%;
-  bottom: -5px;
-  pointer-events: none;
-  z-index: 999;
-  width: 0;
-  height: 0;
-  border-style: solid;
-  border-width: 3px 3px 0 3px;
-  border-color: #fff transparent transparent transparent;
-}
-.sf-menu > li.sfHover > a,
-.sf-menu > li.current > a,
-.sf-menu > li > a:hover {
-  color: #00b1ba;
-}
-/*==================================RESPONSIVE LAYOUTS===============================================*/
-@media only screen and (max-width: 767px) {
-  .navigation {
-    float: none !important;
-    padding: 10px 0px 10px !important;
-    clear: both;
-    margin: 0;
-    width: auto;
-    min-height: 0px;
-  }
-  .navigation nav {
-    border: none !important;
-    float: none !important;
-    font: 12px/15px Arial, Helvetica, sans-serif;
-    text-transform: uppercase;
-    color: #927c67;
-    margin: 0 auto;
-    padding-left: 0 !important;
-  }
-  .navigation nav ul {
-    border: none;
-  }
-  .sf-menu {
-    display: none !important;
-    float: none;
-  }
-  .select-menu {
-    font: 12px/15px Arial, Helvetica, sans-serif;
-    color: #202020;
-    width: 100%;
-    margin: 0 auto;
-    float: none;
-    outline: none;
-    display: block !important;
-    border: 2px solid #fff ;
-  }
-  .page1_header .banner {
+/*!****************  header css ***************!*/
+/*!* nav ************!*/
+/*.navigation {*/
+/*  z-index: 999;*/
+/*  position: relative;*/
+/*  padding: 35px 0;*/
+/*}*/
+/*.navigation .sf-menu {*/
+/*  z-index: 990;*/
+/*  text-align: center;*/
+/*  position: relative;*/
+/*}*/
+/*.navigation nav {*/
+/*  position: relative;*/
+/*  padding: 0;*/
+/*}*/
+/*.select-menu {*/
+/*  display: none !important;*/
+/*}*/
+/*.sf-menu ul {*/
+/*  position: absolute;*/
+/*  top: -999px;*/
+/*  display: none;*/
+/*}*/
+/*.sf-menu > li > ul > li {*/
+/*  float: none;*/
+/*  position: static;*/
+/*}*/
+/*.sf-menu > li {*/
+/*  float: left;*/
+/*  font-weight: 300;*/
+/*  position: relative;*/
+/*  font-size: 18px;*/
+/*  line-height: 22px;*/
+/*}*/
+/*.sf-menu > li + li {*/
+/*  margin-left: 43px;*/
+/*}*/
+/*.sf-menu > li + li:after {*/
+/*  content: '';*/
+/*  background:  0 0 no-repeat;*/
+/*  height: 5px;*/
+/*  width: 5px;*/
+/*  position: absolute;*/
+/*  left: -20px;*/
+/*  top: 10px;*/
+/*}*/
+/*.sf-menu > li > a {*/
+/*  position: relative;*/
+/*  color: #ffffff;*/
+/*  text-align: center;*/
+/*}*/
+/*.sf-menu > li > a.sf-with-ul:after {*/
+/*  content: '';*/
+/*  position: absolute;*/
+/*  width: 5px;*/
+/*  bottom: 15px;*/
+/*  left: 50%;*/
+/*  bottom: -5px;*/
+/*  pointer-events: none;*/
+/*  z-index: 999;*/
+/*  width: 0;*/
+/*  height: 0;*/
+/*  border-style: solid;*/
+/*  border-width: 3px 3px 0 3px;*/
+/*  border-color: #fff transparent transparent transparent;*/
+/*}*/
+/*.sf-menu > li.sfHover > a,*/
+/*.sf-menu > li.current > a,*/
+/*.sf-menu > li > a:hover {*/
+/*  color: #00b1ba;*/
+/*}*/
+/*!*==================================RESPONSIVE LAYOUTS===============================================*!*/
+/*@media only screen and (max-width: 767px) {*/
+/*  .navigation {*/
+/*    float: none !important;*/
+/*    padding: 10px 0px 10px !important;*/
+/*    clear: both;*/
+/*    margin: 0;*/
+/*    width: auto;*/
+/*    min-height: 0px;*/
+/*  }*/
+/*  .navigation nav {*/
+/*    border: none !important;*/
+/*    float: none !important;*/
+/*    font: 12px/15px Arial, Helvetica, sans-serif;*/
+/*    text-transform: uppercase;*/
+/*    color: #927c67;*/
+/*    margin: 0 auto;*/
+/*    padding-left: 0 !important;*/
+/*  }*/
+/*  .navigation nav ul {*/
+/*    border: none;*/
+/*  }*/
+/*  .sf-menu {*/
+/*    display: none !important;*/
+/*    float: none;*/
+/*  }*/
+/*  .select-menu {*/
+/*    font: 12px/15px Arial, Helvetica, sans-serif;*/
+/*    color: #202020;*/
+/*    width: 100%;*/
+/*    margin: 0 auto;*/
+/*    float: none;*/
+/*    outline: none;*/
+/*    display: block !important;*/
+/*    border: 2px solid #fff ;*/
+/*  }*/
+/*  .page1_header .banner {*/
 
-    display: block;
-    width: 100% !important;
-    text-align: center;
-margin-bottom: 20px;
+/*    display: block;*/
+/*    width: 100% !important;*/
+/*    text-align: center;*/
+/*margin-bottom: 20px;*/
 
 
-  }
-}
-/****** nav    *******************/
-/********header *******/
-/*header*/
-header {
-  color: #e6e5e5;
-  display: block;
-  position: relative;
-  z-index: 999;
-  padding: 18px 0 77px;
-  background:  url("../../../../assets/images/slide.jpg") center 0 no-repeat;
-  background-size: cover;
-}
-header .rel {
-  z-index: 999;
-}
-header h1 {
-  text-align: center;
-  z-index: 999;
-  float: left;
-  margin-bottom: 10px;
-}
-header h1 a {
-  display: block;
-  overflow: hidden;
-  font-size: 0;
-  line-height: 0;
-  -webkit-transition: 0s ease;
-  transition: 0s ease;
-}
-header h1.stuck_head {
-  opacity: 0;
-}
-.page1_header {
-  font-weight: 300;
-  font-size: 30px;
-  line-height: 36px;
-  padding-top: 13px;
-}
-.page1_header .banner {
-  background-color: #088389;
-  color: #ffffff;
-  display: block;
-  width: 50%;
-  text-align: center;
-  float: left;
-  font-size: 18px;
-  padding: 59px 0 14px;
-}
-.page1_header .banner .fa {
-  margin-bottom: 27px;
-  display: block;
-  font-size: 72px;
-  line-height: 48px;
-}
-.page1_header .banner:first-child + .banner {
-  background-color: #00b1ba;
-}
-.page1_header .banner:first-child + .banner + .banner {
-  background-color: #00b1ba;
-}
-.page1_header .banner + .banner + .banner {
-  padding-top: 63px;
-  padding-bottom: 13px;
-}
-.page1_header .banner.maxheight1 .fa {
-  margin-bottom: 26px;
-}
-.page1_header .banner:hover {
-  background-color: #000000 !important;
-}
-/****************header *******/
+/*  }*/
+/*}*/
+/*!****** nav    *******************!*/
+/*!********header *******!*/
+/*!*header*!*/
+/*header {*/
+/*  color: #e6e5e5;*/
+/*  display: block;*/
+/*  position: relative;*/
+/*  z-index: 999;*/
+/*  padding: 18px 0 77px;*/
+/*  background:  url("../../../../assets/images/slide.jpg") center 0 no-repeat;*/
+/*  background-size: cover;*/
+/*}*/
+/*header .rel {*/
+/*  z-index: 999;*/
+/*}*/
+/*header h1 {*/
+/*  text-align: center;*/
+/*  z-index: 999;*/
+/*  float: left;*/
+/*  margin-bottom: 10px;*/
+/*}*/
+/*header h1 a {*/
+/*  display: block;*/
+/*  overflow: hidden;*/
+/*  font-size: 0;*/
+/*  line-height: 0;*/
+/*  -webkit-transition: 0s ease;*/
+/*  transition: 0s ease;*/
+/*}*/
+/*header h1.stuck_head {*/
+/*  opacity: 0;*/
+/*}*/
+/*.page1_header {*/
+/*  font-weight: 300;*/
+/*  font-size: 30px;*/
+/*  line-height: 36px;*/
+/*  padding-top: 13px;*/
+/*}*/
+/*.page1_header .banner {*/
+/*  background-color: #088389;*/
+/*  color: #ffffff;*/
+/*  display: block;*/
+/*  width: 50%;*/
+/*  text-align: center;*/
+/*  float: left;*/
+/*  font-size: 18px;*/
+/*  padding: 59px 0 14px;*/
+/*}*/
+/*.page1_header .banner .fa {*/
+/*  margin-bottom: 27px;*/
+/*  display: block;*/
+/*  font-size: 72px;*/
+/*  line-height: 48px;*/
+/*}*/
+/*.page1_header .banner:first-child + .banner {*/
+/*  background-color: #00b1ba;*/
+/*}*/
+/*.page1_header .banner:first-child + .banner + .banner {*/
+/*  background-color: #00b1ba;*/
+/*}*/
+/*.page1_header .banner + .banner + .banner {*/
+/*  padding-top: 63px;*/
+/*  padding-bottom: 13px;*/
+/*}*/
+/*.page1_header .banner.maxheight1 .fa {*/
+/*  margin-bottom: 26px;*/
+/*}*/
+/*.page1_header .banner:hover {*/
+/*  background-color: #000000 !important;*/
+/*}*/
+/*!****************header *******!*/

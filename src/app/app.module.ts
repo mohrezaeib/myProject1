@@ -2,7 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import {HttpClientModule} from '@angular/common/http';
 import { AppComponent } from './app.component';
-import { NavigationComponent } from './components/navigation/navigation.component';
+import { NavigationComponent } from './components/header/navigation/navigation.component';
 import { SliderComponent } from './components/header/slider/slider.component';
 import { ProductComponent } from './components/featuredProduct/product/product.component';
 
