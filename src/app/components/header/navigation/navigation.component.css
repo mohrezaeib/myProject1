@@ -12,8 +12,16 @@ a, a:hover{
   top: 0;
   width: 100%;
   z-index: 500;
+  background: #0f1923;
 }
-
+.nav-rel{
+display: none;
+}
+.sticky.nav-rel{
+  display: block;
+  position: relative;
+  visibility: hidden;
+}
 
 /****************  header css ***************/
 /* nav ************/
