@@ -81,7 +81,7 @@
       </div>
     </div>
   </div>
-  <section id="stuck_container"  [ngClass]="{'nav-rel':true, 'sticky' : isSticky}">
+  <section id="stuck_container2"  [ngClass]="{'nav-rel':true, 'sticky' : isSticky}">
 
     <!--==============================
                 Stuck menu
@@ -130,6 +130,6 @@
       </div>
     </div>
   </section>
-<app-slider  ></app-slider>
+<app-slider *ngIf="showHeader"  ></app-slider>
 </header>
 

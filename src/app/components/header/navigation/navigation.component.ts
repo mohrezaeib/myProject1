@@ -13,7 +13,7 @@ import {Observable} from 'rxjs';
 })
 export class NavigationComponent implements OnInit {
   isSticky = false;
-
+  showHeader = true;
   @HostListener('window:scroll', ['$event'])
   checkScroll() {
     this.isSticky = window.pageYOffset >= 250;
@@ -29,7 +29,8 @@ export class NavigationComponent implements OnInit {
     this.router.events.subscribe((event: Event) => {
       if (event instanceof NavigationEnd) {
         // Hide loading indicator
-        console.log(this.router.url);
+        if (this.router.url !== '/home') { this.showHeader = false; }
+        else { this.showHeader = true; }
 
       }
 
