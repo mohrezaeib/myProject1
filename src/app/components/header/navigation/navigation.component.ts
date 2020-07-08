@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import {ActivatedRoute} from '@angular/router';
+import {Component, HostListener, OnInit} from '@angular/core';
+import {ActivatedRoute, NavigationEnd, Router} from '@angular/router';
 
 
 @Component({
@@ -8,14 +8,27 @@ import {ActivatedRoute} from '@angular/router';
   styleUrls: ['./navigation.component.css']
 })
 export class NavigationComponent implements OnInit {
+  isSticky: boolean = false;
+  showHeader:boolean=false
 
-  constructor(private   actrout: ActivatedRoute) {
+  @HostListener('window:scroll', ['$event'])
+  checkScroll() {
+    this.isSticky = window.pageYOffset >= 250;
+  }
+  constructor(private  router: Router) {
 
   }
 
   ngOnInit(): void {
-    this.actrout.url.subscribe(data => {
-      console.log(data);
+    this.router.events.subscribe(event => {
+      if (!(event instanceof NavigationEnd)) {
+        return;
+      }
+      if (this.router.url === 'home' || this.router.url === '') {
+        this.showHeader = true;
+      } else {
+        this.showHeader = false;
+      }
     });
   }
 
