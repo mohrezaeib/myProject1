@@ -5,6 +5,7 @@ import { AppComponent } from './app.component';
 import { NavigationComponent } from './components/header/navigation/navigation.component';
 import { SliderComponent } from './components/header/slider/slider.component';
 import { ProductComponent } from './components/featuredProduct/product/product.component';
+import { fakeBackendProvider } from './_helper';
 
 import { FooterComponent } from './components/footer/footer.component';
 import { SearchBarComponent } from './components/productPage/search-bar/search-bar.component';
@@ -20,6 +21,8 @@ import { CompanyDescriptionComponent } from './components/company-description/co
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { ProductPageComponent } from './components/productPage/product-page/product-page.component';
 import { SingleProductPageComponent } from './components/productPage/single-product-page/single-product-page.component';
+import { RegisterComponent } from './components/loginPage/register/register.component';
+import { Page404Component } from './components/page404/page404.component';
 
 @NgModule({
   declarations: [
@@ -38,6 +41,8 @@ import { SingleProductPageComponent } from './components/productPage/single-prod
     CompanyDescriptionComponent,
     ProductPageComponent,
     SingleProductPageComponent,
+    RegisterComponent,
+    Page404Component,
 
 
   ],
@@ -48,7 +53,10 @@ import { SingleProductPageComponent } from './components/productPage/single-prod
     FormsModule,
     ReactiveFormsModule
   ],
-  providers: [],
+  providers: [
+    // provider used to create fake backend
+    fakeBackendProvider
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
