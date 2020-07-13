@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { AuthService } from 'src/app/sevices/auth.service';
+import { AuthService } from 'src/app/services/auth.service';
 import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
@@ -8,13 +8,17 @@ import { ActivatedRoute, Router } from '@angular/router';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
-
+  focus: boolean;
+  focus1: boolean;
+  spin = false;
+  wrong = false;
   returnUrl: string;
   mobile: string;
    password: string;
     constructor(private authService: AuthService, private router: Router, private route: ActivatedRoute) {
+
       this.returnUrl = route.snapshot.queryParams['returnUrl'];
-     
+
     }
     login() {
       if (this.mobile && this.password) {
@@ -22,19 +26,22 @@ export class LoginComponent implements OnInit {
           .subscribe(result => {
               if (result.status) {
                 console.log('User is logged in :' , this.returnUrl);
-               
+
                 this.router.navigateByUrl(this.returnUrl);
               } else {
-                console.log("wrong ")
+                this.wrong = true;
+                this.password=""; this.spin =false ;
+
+
               }
-  
+
             }, error => {
               console.log(error);
             }
           );
       }
     }
-  
+
 
   ngOnInit(): void {
   }

@@ -5,9 +5,9 @@ export class Admin {
     mobile: string;
     createdAt: number;
     token: {
-      token: string; 
+      token: string;
       expires: number;
     };
-    birthday:number;
-    image: string
+    birthday: number;
+    image: string;
   }

@@ -16,9 +16,10 @@ export class AuthService {
   constructor(private http: HttpClient, private router: Router) { }
 
   login(mobile: string, password: string ) {
-    return this.http.post<Result>("http://cafeapi.nicode.org" + '/Admin/Login',
-        {mobile: mobile, password: password})
+    return this.http.post<Result>('http://cafeapi.nicode.org' + '/Admin/Login',
+        {mobile, password})
        .pipe(tap(res  => this.setSession(res), e => {}));
+    // this.router.navigateByUrl('/');
   }
 
   private setSession(authResult: Result) {

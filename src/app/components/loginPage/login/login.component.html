@@ -2,7 +2,7 @@
     <main class="main d-flex align-items-center">
       <div class="container">
         <div class="row">
-          <div class="col-md-6 mx-auto">
+          <div class="col-md-8 col-lg-6 mx-auto">
             <div class="card-group">
               <div class="card p-4">
                 <div class="card-body text-center">
@@ -22,18 +22,23 @@
                         <div class="input-group-prepend">
                           <span class="input-group-text"><i class="fa fa-key"></i></span>
                         </div>
-                        <input class="form-control" placeholder="Password" type="password" [(ngModel)]="password" (focus)="focus1=true" (blur)="focus1=false">
+                        <input class="form-control"  placeholder="Password" type="password" [(ngModel)]="password" (focus)="focus1=true" (blur)="focus1=false">
                       </div>
                     </div>
-  
+
                     <div class="row">
                       <div class="col-6">
-                        <button type="button" class="btn btn-primary px-4" (click)="login()">Login</button>
+                        <button type="button" class="btn btn-primary px-4" [ngClass]="{'disabled':spin}"
+                                (click)="login(); spin=true;">
+                          <span [ngClass]='{"spinner-border":spin , "spinner-border-sm":spin }'
+                                role="status" aria-hidden="true"></span>
+                         Login</button>
                       </div>
                       <div class="col-6 text-right">
                         <button type="button" class="btn btn-link px-0">Forgot password?</button>
                       </div>
                     </div>
+                    <div *ngIf="wrong"  class="alert-danger">Incorrect Username or Password</div>
                   </div>
                 </div>
               </div>

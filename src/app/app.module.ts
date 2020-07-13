@@ -20,6 +20,9 @@ import { CompanyDescriptionComponent } from './components/company-description/co
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { ProductPageComponent } from './components/productPage/product-page/product-page.component';
 import { SingleProductPageComponent } from './components/productPage/single-product-page/single-product-page.component';
+import {AuthService} from './services/auth.service';
+import {AuthGuard} from './services/auth.guard';
+import { ProfilePageComponent } from './components/profile-page/profile-page.component';
 
 @NgModule({
   declarations: [
@@ -38,6 +41,7 @@ import { SingleProductPageComponent } from './components/productPage/single-prod
     CompanyDescriptionComponent,
     ProductPageComponent,
     SingleProductPageComponent,
+    ProfilePageComponent,
 
 
   ],
@@ -48,7 +52,7 @@ import { SingleProductPageComponent } from './components/productPage/single-prod
     FormsModule,
     ReactiveFormsModule
   ],
-  providers: [],
+  providers: [AuthService, AuthGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
