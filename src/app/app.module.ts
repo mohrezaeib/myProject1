@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import {HttpClientModule} from '@angular/common/http';
+import {HttpClientModule, HTTP_INTERCEPTORS} from '@angular/common/http';
 import { AppComponent } from './app.component';
 import { NavigationComponent } from './components/header/navigation/navigation.component';
 import { SliderComponent } from './components/header/slider/slider.component';
@@ -23,6 +23,7 @@ import { SingleProductPageComponent } from './components/productPage/single-prod
 import {AuthService} from './services/auth.service';
 import {AuthGuard} from './services/auth.guard';
 import { ProfilePageComponent } from './components/profile-page/profile-page.component';
+import { AuthInterceptorService } from './services/auth-interceptor.service';
 
 @NgModule({
   declarations: [
@@ -52,7 +53,13 @@ import { ProfilePageComponent } from './components/profile-page/profile-page.com
     FormsModule,
     ReactiveFormsModule
   ],
-  providers: [AuthService, AuthGuard],
+  providers: [AuthService,
+             AuthGuard,
+             { provide: HTTP_INTERCEPTORS, useClass:AuthInterceptorService
+              , multi: true }
+
+  
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

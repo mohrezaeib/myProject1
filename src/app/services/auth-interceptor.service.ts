@@ -19,7 +19,7 @@ export class AuthInterceptorService  implements HttpInterceptor {
         headers: req.headers.set('Authorization',
           'Bearer ' + idToken)
       });
-
+      console.log("token added");
       return next.handle(cloned).pipe(tap(() => {},
         (err: any) => {
           if (err instanceof HttpErrorResponse) {
@@ -30,8 +30,12 @@ export class AuthInterceptorService  implements HttpInterceptor {
             }
           }
         }));
+        
+
     } else {
+      console.log("there is no token ");
        return next.handle(req);
+
     }
   }
 }
