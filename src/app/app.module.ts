@@ -24,6 +24,7 @@ import {AuthService} from './services/auth.service';
 import {AuthGuard} from './services/auth.guard';
 import { ProfilePageComponent } from './components/profile-page/profile-page.component';
 import { AuthInterceptorService } from './services/auth-interceptor.service';
+import { SecuredImageComponent } from './components/secured-image/secured-image.component';
 
 @NgModule({
   declarations: [
@@ -43,6 +44,7 @@ import { AuthInterceptorService } from './services/auth-interceptor.service';
     ProductPageComponent,
     SingleProductPageComponent,
     ProfilePageComponent,
+    SecuredImageComponent,
 
 
   ],
@@ -55,10 +57,10 @@ import { AuthInterceptorService } from './services/auth-interceptor.service';
   ],
   providers: [AuthService,
              AuthGuard,
-             { provide: HTTP_INTERCEPTORS, useClass:AuthInterceptorService
+             { provide: HTTP_INTERCEPTORS, useClass: AuthInterceptorService
               , multi: true }
 
-  
+
   ],
   bootstrap: [AppComponent]
 })

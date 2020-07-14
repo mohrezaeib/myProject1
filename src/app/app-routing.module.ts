@@ -15,6 +15,7 @@ const appRouts: Routes = [
   {path: 'warranty', component: WarrantyComponent},
   {path: '', redirectTo: '/home' , pathMatch: 'full'},
   {path: 'profile', component: ProfilePageComponent, canActivate: [AuthGuard]},
+  // {path: '/assets/protected-info',  canActivate: [AuthGuard]},
   {path: 'home', component: HomeComponent}
 ];
 @NgModule({

@@ -2,22 +2,22 @@
     <div class="container-fluid banner-section">
         <div class="banner_inner d-flex align-items-center">
          <div class="banner_content ">
-             <div class="media row">
+             <div *ngIf="userInfo " class="media row">
                  <div class="d-flex col-md-4 ">
-                     <img class="img img-responsive" src="assets/images/personal.jpg" alt="">
+<!--                      <img class="img img-responsive" [src]="userInfo.profileImage" alt="">-->
+                   <app-secured-image [src]="userInfo.profileImage"></app-secured-image>
                  </div>
-                 <div class="media-body col-md-8">
+                 <div  class="media-body col-md-8">
                      <div class="personal_text">
-                      
-                         <h3>Donald McKinney</h3>
+
+                         <h3>{{userInfo.name }} {{userInfo.familyName}}</h3>
                          <h4>Junior UI/UX Developer</h4>
                          <p>You will begin to realise why this exercise is called the Dickens Pattern (with reference to the ghost showing Scrooge some different futures)</p>
                          <ul class="list basic_infob ">
-                             <li><a ><i class="fa fa-calendar"></i> 31st December, 1992</a></li>
-                             <li><a ><i class="fa fa-phone"></i> 44 (012) 6954 783</a></li>
-                             <li><a ><i class="fa fa-envelope"></i> businessplan@donald</a></li>
-                             <li><a ><i class="fa fa-home"></i> Santa monica bullevard</a></li>
-                        
+                             <li><a ><i class="fa fa-calendar"></i> {{userInfo.birthday | date:'mediumDate'}}</a></li>
+                             <li><a ><i class="fa fa-phone"></i>{{userInfo.mobile}}</a></li>
+                             <li><a ><i class="fa fa-envelope"></i> {{userInfo.email}}</a></li>
+                             <li><a ><i class="fa fa-home"></i> {{userInfo.city}} {{userInfo.provience}} {{userInfo.country}}</a></li>
                          </ul>
                         <button class="float-left btn btn-outline-dark " (click)="edit()"><i class="fa fa-pencil-square-o" aria-hidden="true"></i>Edit Info</button>
                      </div>

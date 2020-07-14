@@ -1,0 +1,17 @@
+{
+  "id": "string",
+  "name": "Junior ",
+  "familyName": "UI/UX Developer",
+  "birthday": 13333333,
+  "mobile": "0913123456",
+  "createdAt": 13840613,
+  "gender": 2,
+
+  "profileImageId": "string",
+  "profileImage": "/assets/images/personal.jpg",
+  "city": "Toronto",
+  "country": "Canada",
+  "provience": "Toronto",
+  "email": "mohrezaeib@gmail.com",
+  "status": 2
+}

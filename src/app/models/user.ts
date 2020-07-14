@@ -6,10 +6,6 @@ export class User {
     mobile: string;
     createdAt: number;
     gender: number;
-    token: {
-      token: string;
-      expires: number
-    };
     profileImageId: string;
     profileImage: string;
     city: string;
