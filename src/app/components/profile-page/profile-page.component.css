@@ -1,0 +1,25 @@
+.banner-section {
+    position: relative;
+    z-index: 1;
+    background-image: -webkit-linear-gradient(0deg, #766dff 0%, #88f3ff 100%);
+    background-image: -moz-linear-gradient(0deg, #766dff 0%, #88f3ff 100%);
+    background-image: -ms-linear-gradient(0deg, #766dff 0%, #88f3ff 100%);
+    background: linear-gradient(0deg, #766dff 0%, #88f3ff 100%);
+
+    margin-bottom: 200px;
+}
+.banner_content{
+
+}
+.banner_inner{
+    margin: 100px 5% 0;
+    background: white;
+    border-radius: 50px;
+    padding: 50px;
+}
+i{
+    margin:0 15px
+}
+.basic_infob a{
+    cursor: pointer;
+}

@@ -11,5 +11,7 @@ export class ProfilePageComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
+  edit(){
+      console.log();
+  }
 }

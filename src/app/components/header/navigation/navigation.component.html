@@ -69,8 +69,8 @@
 
 <!--</div>-->
 
-<header>
-  <div class="container">
+<header class="row"> 
+  <div class="container-fluid">
     <div class="row">
       <div class="">
         <h1>
@@ -81,7 +81,7 @@
       </div>
     </div>
   </div>
-  <section id="stuck_container" [ngClass]="{'nav-rel':true, 'sticky' : isSticky}">
+  <section id="stuck_container container-fluid" [ngClass]="{'nav-rel':true, 'sticky' : isSticky}">
 
     <!--==============================
                 Stuck menu
