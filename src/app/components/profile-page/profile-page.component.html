@@ -10,7 +10,8 @@
                  <div  class="media-body col-md-8">
                      <div class="personal_text">
 
-                         <h3>{{userInfo.name }} {{userInfo.familyName}}</h3>
+                         <h3>  fsd
+                         </h3>
                          <h4>Junior UI/UX Developer</h4>
                          <p>You will begin to realise why this exercise is called the Dickens Pattern (with reference to the ghost showing Scrooge some different futures)</p>
                          <ul class="list basic_infob ">
@@ -21,9 +22,18 @@
                          </ul>
                         <button class="float-left btn btn-outline-dark " (click)="edit()"><i class="fa fa-pencil-square-o" aria-hidden="true"></i>Edit Info</button>
                      </div>
+
                  </div>
              </div>
          </div>
      </div>
     </div>
+
+
+  <form ngForm #f='ngForm' class="personal_text">
+
+
+    <li><a ><i class="fa fa-phone"></i><input [(ngModel)]="userInfo.mobile" name="mobile" ></a></li>
+    <button type="submit" (click)="submit()">submit</button>
+  </form>
 </div>

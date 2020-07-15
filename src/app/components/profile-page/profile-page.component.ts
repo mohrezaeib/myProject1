@@ -23,4 +23,7 @@ export class ProfilePageComponent implements OnInit {
 
 
   }
+  submit(){
+    console.log(this.userInfo.mobile)
+  }
 }

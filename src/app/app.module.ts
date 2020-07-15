@@ -25,6 +25,7 @@ import {AuthGuard} from './services/auth.guard';
 import { ProfilePageComponent } from './components/profile-page/profile-page.component';
 import { AuthInterceptorService } from './services/auth-interceptor.service';
 import { SecuredImageComponent } from './components/secured-image/secured-image.component';
+import { EditableComponent } from './components/editable/editable.component';
 
 @NgModule({
   declarations: [
@@ -45,6 +46,7 @@ import { SecuredImageComponent } from './components/secured-image/secured-image.
     SingleProductPageComponent,
     ProfilePageComponent,
     SecuredImageComponent,
+    EditableComponent,
 
 
   ],
