@@ -10,16 +10,17 @@ import {AuthService} from '../../../services/auth.service';
 })
 export class NavigationComponent implements OnInit {
   isSticky = false;
-  showSlider = false;
+  homepage = false;
 
   @HostListener('window:scroll', ['$event'])
   checkScroll() {
+
     this.isSticky = window.pageYOffset >= 250;
+
   }
+
+
   constructor(private  router: Router, private  auth: AuthService) {
-
-
-
   }
 
 
@@ -30,9 +31,9 @@ export class NavigationComponent implements OnInit {
         return;
       }
       if (this.router.url === '/home' || this.router.url === '/') {
-        this.showSlider = true;
+        this.homepage = true;
       } else {
-        this.showSlider = false;
+        this.homepage = false;
 
       }
     });

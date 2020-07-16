@@ -28,7 +28,7 @@ export class EditableComponent implements ControlValueAccessor, OnInit {
   @Input() initialVal =''
   private _value =''; // Private variable for input value
   private preValue = ''; // The value before clicking to edit
-  private editing = true; // Is Component in edit mode?
+  public editing = true; // Is Component in edit mode?
   public onChange: any = Function.prototype; // Trascend the onChange event
   public onTouched: any = Function.prototype; // Trascend the onTouch event
   constructor() {

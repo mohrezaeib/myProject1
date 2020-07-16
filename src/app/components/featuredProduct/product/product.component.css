@@ -1,3 +1,7 @@
+.featured-product{
+
+}
+
 .single-product:first-child{
   background-color: #dedede69;
 }
@@ -10,13 +14,15 @@
 .single-product {
   overflow: hidden;
   padding:20px;
+  padding-top: 60px;
 
 
 }
 
 .inside-product img{
-  width: 80%;
+  width: 60%;
   margin:auto;
+  margin: 20px auto;
 
 }
 .inside-product{

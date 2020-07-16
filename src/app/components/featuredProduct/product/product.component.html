@@ -1,4 +1,4 @@
-<div class="row">
+<div class="row featured-product">
   <div class="single-product col-md-4 text-center no-gutters " *ngFor="let product of products">
     <div class="inside-product ">
       <img [src]="product.productImage"/>
@@ -10,7 +10,7 @@
       </div>
 
       <div class="buuu">
-      <a [routerLink]="['/products']" [queryParams]="{id:1}">
+      <a [routerLink]="['/products','1']" [queryParams]="{id:1}">
         <p>
           <span class="bg"></span>
           <span class="base"></span>

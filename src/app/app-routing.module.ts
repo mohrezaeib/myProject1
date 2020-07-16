@@ -8,8 +8,10 @@ import {WarrantyComponent} from './components/warrantyPage/warranty/warranty.com
 import {ProductPageComponent} from './components/productPage/product-page/product-page.component';
 import {ProfilePageComponent} from './components/profile-page/profile-page.component';
 import {AuthGuard} from './services/auth.guard';
+import {ProductDeatilComponent} from './components/productPage/product-deatil/product-deatil.component';
 const appRouts: Routes = [
   {path: 'products', component: ProductPageComponent},
+  { path: 'products/:id', component : ProductDeatilComponent},
   {path: 'contact-us', component: ContactFormComponent},
   {path: 'login', component: LoginComponent},
   {path: 'warranty', component: WarrantyComponent},

@@ -69,8 +69,10 @@
 
 <!--</div>-->
 
-<header class="row"> 
-  <div class="container-fluid">
+<header class="row">
+  <div class="bg" *ngIf="homepage" ></div>
+  <div class="blue-stribe" *ngIf="homepage"></div>
+  <div class="container-fluid" *ngIf="homepage">
     <div class="row">
       <div class="">
         <h1>
@@ -81,7 +83,7 @@
       </div>
     </div>
   </div>
-  <section id="stuck_container container-fluid" [ngClass]="{'nav-rel':true, 'sticky' : isSticky}">
+  <section id="stuck_container container-fluid" [ngClass]="{'nav-rel':true, 'sticky' : (isSticky || !(homepage)) }">
 
     <!--==============================
                 Stuck menu
@@ -107,6 +109,6 @@
       </div>
     </div>
   </section>
-<app-slider *ngIf="showSlider" ></app-slider>
+<app-slider *ngIf="homepage"  ></app-slider>
 </header>
 

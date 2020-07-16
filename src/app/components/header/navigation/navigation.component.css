@@ -13,6 +13,7 @@ a, a:hover{
   width: 100%;
   z-index: 500;
   background: #000000;
+  height: 100px;
 }
 
 
@@ -143,8 +144,35 @@ header {
   position: relative;
   z-index: 999;
   padding: 18px 0 77px;
+  position: relative;
+
+}
+header .bg{
   background:  url("../../../../assets/images/slide.jpg") center 0 no-repeat;
   background-size: cover;
+  position: absolute;
+  width: 130%;
+  height: 100%;
+  right: -30%;
+  z-index: -2;
+  display: block;
+  filter: blur(2px) grayscale(50%)   ;
+  -webkit-filter: blur(2px)  grayscale(90%);
+  /*filter: drop-shadow(16px 16px 20px blue);*/
+  /*filter: grayscale(50%);*/
+  /*filter: hue-rotate(90deg);*/
+  padding: 0;
+  margin: 0;
+
+}
+header .blue-stribe{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  right: 0%;
+  z-index: -1;
+  background-color: #29aafe;
+  opacity: .3;
 }
 header .rel {
   z-index: 999;
