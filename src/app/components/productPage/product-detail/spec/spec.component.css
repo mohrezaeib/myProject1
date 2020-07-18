@@ -1,0 +1,31 @@
+.product-technologies-border {
+  border-bottom: 1px solid #dcdcdc;
+}
+.product-tech-specs-label {
+  font-family: industrybold,'Open Sans Bold', sans-serif;
+  font-weight: 700;
+  font-size: 22px;
+}
+.product-tech-specs-value {
+  font-size: 16px;
+}
+.product-technology-heading-selected {
+  border-bottom: 3px solid #E1261C;
+}
+.product-technology-heading {
+  display: inline-block;
+  margin-right: 20px;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  cursor: pointer;
+  margin: 25px 0;
+}
+.product-technologies-logos {
+  text-align: right;
+}
+.product-tech-specs-row{
+  margin: 20px 0;
+}
+.product-technology-details{
+  margin: 50px 0;
+}

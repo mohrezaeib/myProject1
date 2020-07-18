@@ -1,5 +1,6 @@
-<div class="row">
-  <div class="container-fluid banner-section">
+<div class="row pr">
+  <div class="profile-bg"></div>
+  <div class="container-fluid col-md-12 col-lg-6 banner-section">
     <div class="banner_inner d-flex align-items-center">
       <div class="banner_content ">
         <div #f='ngForm' *ngIf="!editing" class="personal_text" ngForm>
@@ -22,7 +23,7 @@
                   <li><a><i class="fa fa-home"></i> {{userInfo.city}} {{userInfo.provience}} {{userInfo.country}}</a>
                   </li>
                 </ul>
-                <button (click)="edit()" class="float-left btn btn-outline-dark "><i aria-hidden="true"
+                <button (click)="edit()" class="float-left btn btn-primary "><i aria-hidden="true"
                                                                                      class="fa fa-pencil-square-o"></i>Edit
                   Info
                 </button>
@@ -75,25 +76,25 @@
                 </div>
                 <div class="form-group row">
 
-                  <div class="col-lg-1"> City</div>
-                  <div class="col-lg-3"><input [(ngModel)]="ineditUser.city" class="form-control " name="city"
+                  <div class="col-md-3"> City</div>
+                  <div class="col-md-9"><input [(ngModel)]="ineditUser.city" class="form-control " name="city"
                                                type="text"></div>
-                  <div class="col-lg-1"> Province</div>
-                  <div class="col-lg-3"><input [(ngModel)]="ineditUser.provience" class="form-control " name="province"
+                  <div class="col-md-3"> Province</div>
+                  <div class="col-md-9"><input [(ngModel)]="ineditUser.provience" class="form-control " name="province"
                                                type="text"></div>
-                  <div class="col-lg-1"> Country</div>
-                  <div class="col-lg-3"><input [(ngModel)]="ineditUser.country" class="form-control " name="country"
+                  <div class="col-md-3"> Country</div>
+                  <div class="col-md-9"><input [(ngModel)]="ineditUser.country" class="form-control " name="country"
                                                type="text"></div>
                 </div>
                 <div class="row">
-                  <div class="col-4">
+                  <div class="col-sm-6 f-but ">
                     <button (click)="submit()"
                             class=" btn btn-success "><i aria-hidden="true"
                                                          class="fa fa-check"></i>Submit
                     </button>
                   </div>
 
-                  <div class="col-4">
+                  <div class="col-sm-6 f-but">
                     <button (click)="cancel()"
                             class=" btn btn-danger "><i aria-hidden="true"
                                                         class="fa fa-times"></i>Cancel
@@ -120,26 +121,56 @@
 <!--    </div>-->
 <!--  </div>-->
 <!--</div>-->
+  <div class="container-fluid col-md-12 col-lg-6 your-products">
 
 
 
-    <div class="container">
-      <div class="row">
-        <p class="col-12">Your Products:</p>
-        <div class="col-md-3 product-image">
-          <img class="img-responsive" src ='assets/images/pro.png'>
-        </div>
-        <div class="col-md-6 offset-2 product-info">
-          <h1>Product Title</h1>
-          <p>short describtion of product</p>
-          <div class="hr"></div>
-          <h3>Pro Display XDR
-          </h3>
-          <div class="property-box">
-            properties of this product
+</div>
+</div>
+<div class="row">
+  <div class="col-12 product-features-heading">
+    <h2>Your Registered Products</h2>
+  </div>
+</div>
+<div class="row end-bg">
+  <div class="col-12 register container">
+
+    <form ngForm #register>
+      <h3> Register a device </h3>
+
+      <div class="form-group   row justify-content-center">
+        <label for="deviceID" class="col-sm-3">Divice ID </label>
+        <input class="form-control col-sm-6" id="deviceID" name="id" ngModel>
+        <button type="button" class="btn btn-outline-success offset-sm-1 ">Register New Device </button>
+      </div>
+
+    </form>
+  </div>
+</div>
+<div CLASS="row product-list">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <div class="bg-random  ">
+          <h3>Device model</h3>
+          <p> Device Name : device name </p>
+          <p> serialNo : dflnbkldf,bnc.</p>
+          <div class="buuu ">
+            <a [routerLink]="['/products','1']">
+              <p>
+                <span class="bg"></span>
+                <span class="base"></span>
+                <span class="text">
+           More Info  <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
+          </span>
+              </p>
+            </a>
+
           </div>
-
         </div>
       </div>
+
     </div>
+  </div>
+
 </div>

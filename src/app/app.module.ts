@@ -26,6 +26,13 @@ import { ProfilePageComponent } from './components/profile-page/profile-page.com
 import { AuthInterceptorService } from './services/auth-interceptor.service';
 import { SecuredImageComponent } from './components/secured-image/secured-image.component';
 import { EditableComponent } from './components/editable/editable.component';
+import { OverviewComponent } from './components/productPage/product-detail/overview/overview.component';
+import { DownloadComponent } from './components/productPage/product-detail/download/download.component';
+import { SpecComponent } from './components/productPage/product-detail/spec/spec.component';
+import { GoogleMapsModule } from '@angular/google-maps';
+import { AgmCoreModule } from '@agm/core';
+import { AgmMapComponent } from './components/agm-map/agm-map.component';
+
 
 @NgModule({
   declarations: [
@@ -47,6 +54,11 @@ import { EditableComponent } from './components/editable/editable.component';
     ProfilePageComponent,
     SecuredImageComponent,
     EditableComponent,
+    OverviewComponent,
+    DownloadComponent,
+    SpecComponent,
+    AgmMapComponent
+
 
 
   ],
@@ -55,7 +67,10 @@ import { EditableComponent } from './components/editable/editable.component';
     HttpClientModule,
     AppRoutingModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    AgmCoreModule.forRoot({
+      apiKey: 'AIzaSyAvcDy5ZYc2ujCS6TTtI3RYX5QmuoV8Ffw'
+    })
   ],
   providers: [AuthService,
              AuthGuard,

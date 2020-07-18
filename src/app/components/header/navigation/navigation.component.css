@@ -148,7 +148,7 @@ header {
 
 }
 header .bg{
-  background:  url("../../../../assets/images/slide.jpg") center 0 no-repeat;
+  background:  url("~/assets/images/slide.jpg") center 0 no-repeat;
   background-size: cover;
   position: absolute;
   width: 130%;

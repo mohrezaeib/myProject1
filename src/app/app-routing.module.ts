@@ -9,9 +9,18 @@ import {ProductPageComponent} from './components/productPage/product-page/produc
 import {ProfilePageComponent} from './components/profile-page/profile-page.component';
 import {AuthGuard} from './services/auth.guard';
 import {ProductDeatilComponent} from './components/productPage/product-deatil/product-deatil.component';
+import {OverviewComponent} from './components/productPage/product-detail/overview/overview.component';
+import {DownloadComponent} from './components/productPage/product-detail/download/download.component';
+import {SpecComponent} from './components/productPage/product-detail/spec/spec.component';
 const appRouts: Routes = [
   {path: 'products', component: ProductPageComponent},
-  { path: 'products/:id', component : ProductDeatilComponent},
+  { path: 'products/:id', component : ProductDeatilComponent,
+  children: [
+    {path: '', component: OverviewComponent},
+    {path: 'overview', component: OverviewComponent},
+    {path: 'download', component: DownloadComponent},
+    {path: 'spec', component: SpecComponent}
+  ]},
   {path: 'contact-us', component: ContactFormComponent},
   {path: 'login', component: LoginComponent},
   {path: 'warranty', component: WarrantyComponent},

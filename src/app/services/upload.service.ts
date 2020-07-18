@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpEvent, HttpErrorResponse, HttpEventType } from '@angular/common/http';
-import * as global from '../globals';
+// import * as global from '../globals';
 import { map } from 'rxjs/operators';
 import {Observable} from 'rxjs';
 
@@ -9,7 +9,7 @@ import {Observable} from 'rxjs';
 })
 export class UploadService {
   constructor(private httpClient: HttpClient) {}
-  postFile(fileToUpload: File , url ): Observable<Response> {
+  postFile(fileToUpload: File , url ): Observable<any> {
     const endpoint = 'http://cafeapi.nicode.org/Document/SendDocument' + url;
     const formData: FormData = new FormData();
     formData.append('fileKey', fileToUpload, fileToUpload.name);

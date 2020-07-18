@@ -1,0 +1,87 @@
+#product-overview-image{
+  position: relative;
+  background-image: url('/assets/images/overview-banner.jpg');
+  height: 60vw;
+  color: white;
+  font-weight: 300;
+  align-items: flex-end;
+  font-size: 1.5rem;
+  /*-webkit-text-stroke: 1px  #26272b;*/
+  text-shadow: 2px 2px #26272b;
+
+}
+
+.product-features-heading h2 {
+  margin: 0;
+  padding: 56px 0;
+  font-family: 'grinddemolished';
+  font-size: 48px;
+}
+.product-features-heading {
+  background-color: black;
+  color: white;
+  text-align: center;
+
+  background-image: url('/assets/images/title-bg-texture@2x.png');
+  background-size: cover;
+  background-position-x:0 ;}
+.product-feature .col-md-6{
+  align-self: center;
+  padding: 10%;
+}
+.product-feature .col-md-6 h2 {
+  padding: 15px 0;
+}
+.feature-light-grey{
+  background-image: url('/assets/images/feature-light-grey.jpg');
+  background-size: cover;
+
+}
+.product-feature{
+  color: black;
+  padding: 176px 0;
+  font-size: 16px;
+  letter-spacing: 0.2px;
+  line-height: 30px;
+}
+.product-feature-result-image {
+  display: flex;
+  justify-content: center;
+}
+.product-feature-result-image img {
+  vertical-align: middle;
+  max-width: 100%;
+}
+.row-product-grid-features .product-feature-result  {
+  border-right: 1px solid #dcdcdc;
+  padding: 10px 60px 36px 60px;
+  background-color: #fafafa;
+}
+.product-feature-result h3 {
+  font-family: grindsimple;
+  color: black;
+  font-size: 24px;
+  margin-bottom: 16px;
+}
+.row-product-grid-features{
+  border-bottom:  1px solid #dcdcdc;;
+}
+.accessories-list .product-result{
+  border: 1px solid #dcdcdc;
+  padding: 10px 60px 36px 60px;
+  background-color: #fafafa;
+  text-align: center;
+}
+.accessories-list a {
+  font-size: 14px;
+  font-weight: bold;
+  color: #E1261C;
+  text-decoration: none;
+  transition: color 0.4s;
+}
+.end-bg{
+  background-image: url(/assets/images/subscribe-bg@2500w-compressor.jpg);
+  background-size: cover;
+  height: 100px;
+  width: 100%;
+}
