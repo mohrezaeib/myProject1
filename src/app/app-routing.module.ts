@@ -1,5 +1,5 @@
 import {NgModel} from '@angular/forms';
-import {Routes, RouterModule} from '@angular/router';
+import {Routes, RouterModule, Router, Scroll} from '@angular/router';
 import {ContactFormComponent} from './components/ContactPage/contact-form/contact-form.component';
 import {HomeComponent} from './components/home/home.component';
 import {NgModule} from '@angular/core';
@@ -12,6 +12,8 @@ import {ProductDeatilComponent} from './components/productPage/product-deatil/pr
 import {OverviewComponent} from './components/productPage/product-detail/overview/overview.component';
 import {DownloadComponent} from './components/productPage/product-detail/download/download.component';
 import {SpecComponent} from './components/productPage/product-detail/spec/spec.component';
+import {ViewportScroller} from '@angular/common';
+import {filter} from 'rxjs/operators';
 const appRouts: Routes = [
   {path: 'products', component: ProductPageComponent},
   { path: 'products/:id', component : ProductDeatilComponent,
@@ -30,9 +32,12 @@ const appRouts: Routes = [
   {path: 'home', component: HomeComponent}
 ];
 @NgModule({
-  imports: [RouterModule.forRoot((appRouts))],
+  imports: [RouterModule.forRoot((appRouts), {scrollPositionRestoration: 'enabled'})],
   exports: [RouterModule]
 
 })
 export class AppRoutingModule{
+  constructor(router: Router, viewportScroller: ViewportScroller) {
+
+  }
 }

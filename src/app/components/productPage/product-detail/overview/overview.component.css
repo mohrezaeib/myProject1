@@ -1,7 +1,7 @@
 #product-overview-image{
   position: relative;
   background-image: url('/assets/images/overview-banner.jpg');
-  height: 60vw;
+  min-height: 60vw;
   color: white;
   font-weight: 300;
   align-items: flex-end;
@@ -16,12 +16,13 @@
   padding: 56px 0;
   font-family: 'grinddemolished';
   font-size: 48px;
+
 }
 .product-features-heading {
   background-color: black;
   color: white;
   text-align: center;
-
+  margin: 20px auto;
   background-image: url('/assets/images/title-bg-texture@2x.png');
   background-size: cover;
   background-position-x:0 ;}
@@ -53,7 +54,7 @@
   max-width: 100%;
 }
 .row-product-grid-features .product-feature-result  {
-  border-right: 1px solid #dcdcdc;
+  border: 1px solid #dcdcdc;
   padding: 10px 60px 36px 60px;
   background-color: #fafafa;
 }
@@ -64,7 +65,7 @@
   margin-bottom: 16px;
 }
 .row-product-grid-features{
-  border-bottom:  1px solid #dcdcdc;;
+  border:  1px solid #dcdcdc;;
 }
 .accessories-list .product-result{
   border: 1px solid #dcdcdc;
@@ -82,6 +83,6 @@
 .end-bg{
   background-image: url(/assets/images/subscribe-bg@2500w-compressor.jpg);
   background-size: cover;
-  height: 100px;
-  width: 100%;
+  /*height: 100px;*/
+
 }

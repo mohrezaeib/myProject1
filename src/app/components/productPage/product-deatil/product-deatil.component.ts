@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, ElementRef, OnInit, ViewChild} from '@angular/core';
 import {Product} from '../../../models/product';
 import {ActivatedRoute} from '@angular/router';
 
@@ -8,12 +8,16 @@ import {ActivatedRoute} from '@angular/router';
   styleUrls: ['./product-deatil.component.css']
 })
 export class ProductDeatilComponent implements OnInit {
-  product: Product = {productID : 1, productDetail : 'product detail ', productName: 'Name ' , productImage: 'assets/images/pro.png'};
+  product: Product = {productID: 1, productDetail: 'product detail ', productName: 'Name ', productImage: 'assets/images/pro.png'};
+  @ViewChild('container') container: ElementRef;
+
   constructor(private route: ActivatedRoute) {
-    this.route.params.subscribe( params => console.log(params) );
+    this.route.params.subscribe(params => console.log(params));
   }
 
   ngOnInit(): void {
   }
+
+
 
 }

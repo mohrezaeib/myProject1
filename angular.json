@@ -28,10 +28,8 @@
               "node_modules/bootstrap/dist/css/bootstrap.css",
               "node_modules/font-awesome/css/font-awesome.css",
               "src/styles.css"
-
             ],
             "scripts": [
-
               "node_modules/jquery/dist/jquery.min.js",
               "node_modules/bootstrap/dist/js/bootstrap.min.js",
               "src/script.js"
@@ -126,6 +124,10 @@
               "devServerTarget": "myProject1:serve:production"
             }
           }
+        },
+        "deploy": {
+          "builder": "@angular/fire:deploy",
+          "options": {}
         }
       }
     }

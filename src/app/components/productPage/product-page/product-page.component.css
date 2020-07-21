@@ -15,6 +15,7 @@
   background-image: url("/assets/images/header-textured-bg.png");
   padding: 100px 20px;
   position: relative;
+  overflow-x: hidden;
 }
 .product-image{
   position: relative;

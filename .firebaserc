@@ -1,0 +1,14 @@
+{
+  "projects": {
+    "default": "test1-ff9c3"
+  },
+  "targets": {
+    "test1-ff9c3": {
+      "hosting": {
+        "myProject1": [
+          "test1-ff9c3"
+        ]
+      }
+    }
+  }
+}

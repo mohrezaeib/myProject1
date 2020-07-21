@@ -1,19 +1,21 @@
-<div class="row">
-  <div  class="container-fluid product-header  ">
+<div class="container-fluid">
+  <div  class=" product-header row  ">
     <div class="red-stripe" [ngStyle]="{opacity:'20%'}"></div>
     <div class="col-md-8 col-lg-4 product-image">
       <img class="img-responsive" [src]="product.productImage">
 
 
     </div>
-    <div class="hanging-title col-md-3 offset-3">
-      <h1>Product Title</h1>
-      <p>short describtion of product</p>
+
+    <div class="row">
+      <div class="hanging-title col-md-3 offset-3">
+        <h1>Product Title</h1>
+        <p>short describtion of product</p>
+      </div>
     </div>
 
-
   </div>
-  <div id="product-tabs" class="container-fluid">
+  <div #container  id="product-tabs" class="container-fluid">
     <div class="bckg"></div>
   <div  class="container-fluid" >
     <div class="container">
@@ -21,14 +23,14 @@
 
 
 
-        <div class="col-auto product-tab-col">
-          <a routerLink="overview" routerLinkActive="tab-selected" class="tab product-tab " >Overview</a>
+        <div    class="col-md-2 product-tab-col">
+          <a    routerLink="overview"  routerLinkActive="tab-selected" class="tab product-tab " >Overview</a>
         </div>
-        <div class="col-auto product-tab-col ml-lg-3">
+        <div class="col-md-2 product-tab-col ">
           <a routerLink="download" routerLinkActive="tab-selected" class="tab product-tab " >Downloads</a>
         </div>
-        <div class="col text-sm-right product-tab-col text-nowrap">
-          <a routerLink="spec" routerLinkActive="tab-selected" class="tab product-tab " >Tech Specs <i class="fa fa-chevron-right" aria-hidden="true"></i></a>
+        <div class="col-md-8 text-sm-right product-tab-col text-nowrap">
+          <a  routerLink="spec" routerLinkActive="tab-selected" class="tab product-tab " >Tech Specs <i class="fa fa-chevron-right" aria-hidden="true"></i></a>
         </div>
 
 
@@ -40,5 +42,5 @@
 
 
   </div>
-    <router-outlet class="container-fluid"></router-outlet>
+    <router-outlet   ></router-outlet>
   </div>

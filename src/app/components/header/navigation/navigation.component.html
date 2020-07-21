@@ -69,21 +69,43 @@
 
 <!--</div>-->
 
-<header class="row">
+<header class="container-fluid">
   <div class="bg" *ngIf="homepage" ></div>
   <div class="blue-stribe" *ngIf="homepage"></div>
-  <div class="container-fluid" *ngIf="homepage">
-    <div class="row">
+  <div class="row" *ngIf="homepage">
+    <div class="">
       <div class="">
         <h1>
-          <a href="#">
+          <a routerLink="/home">
             <img src="/assets/images/logo.png" alt="Logo alt">
           </a>
         </h1>
       </div>
     </div>
   </div>
-  <section id="stuck_container container-fluid" [ngClass]="{'nav-rel':true, 'sticky' : (isSticky || !(homepage)) }">
+  <div class="d-md-none ">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark ">
+      <a class="navbar-brand" routerLink="/home">Stable</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item"> <a routerLink="/home" routerLinkActive="active" class="nav-link ">Home</a></li>
+          <li class="nav-item" ><a routerLink="/products" routerLinkActive="active" class="nav-link ">Products</a></li>
+          <li class="nav-item"> <a routerLink="/contact-us" routerLinkActive="active" class="nav-link ">Contact Us</a></li>
+          <li class="nav-item" *ngIf="!( loggedIn() )" ><a routerLinkActive="active"  routerLink="/login" class="nav-link ">Login</a></li>
+          <li class="nav-item" *ngIf="( loggedIn() )" ><a routerLinkActive="active"  routerLink="/profile" class="nav-link " >Profile{{userName()}}</a></li>
+          <li class="nav-item" *ngIf="( loggedIn() )" ><a routerLinkActive="active"  (click)="loggOut()"  routerLink class="nav-link ">Log Out</a></li>
+
+        </ul>
+
+      </div>
+    </nav>
+  </div>
+
+  <section class="d-none d-md-block" id="stuck_container " [ngClass]="{'nav-rel':true, 'sticky' : (isSticky || !(homepage)) }">
 
     <!--==============================
                 Stuck menu
@@ -93,6 +115,7 @@
         <div class="col-md-12 ">
           <div class="navigation ">
             <nav>
+
               <ul class="sf-menu">
                 <li> <a routerLink="/home" routerLinkActive="active" class="  ">Home</a></li>
                 <li ><a routerLink="/products" routerLinkActive="active" class=" ">Products</a></li>
@@ -109,6 +132,7 @@
       </div>
     </div>
   </section>
+
 <app-slider *ngIf="homepage"  ></app-slider>
 </header>
 

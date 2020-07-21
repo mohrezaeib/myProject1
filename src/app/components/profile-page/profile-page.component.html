@@ -1,132 +1,135 @@
-<div class="row pr">
-  <div class="profile-bg"></div>
-  <div class="container-fluid col-md-12 col-lg-6 banner-section">
-    <div class="banner_inner d-flex align-items-center">
-      <div class="banner_content ">
-        <div #f='ngForm' *ngIf="!editing" class="personal_text" ngForm>
-          <div *ngIf="userInfo " class="media row">
-            <div class="d-flex col-md-4 ">
-              <app-secured-image [src]="userInfo.profileImage"></app-secured-image>
-            </div>
-            <div class="media-body col-md-8">
-              <div class="personal_text">
-
-                <h3> {{userInfo.name}} {{userInfo.familyName}}
-                </h3>
-                <h4>Junior UI/UX Developer</h4>
-                <p>You will begin to realise why this exercise is called the Dickens Pattern (with reference to the
-                  ghost showing Scrooge some different futures)</p>
-                <ul class="list basic_infob ">
-                  <li><a><i class="fa fa-calendar"></i> {{userInfo.birthday | date:'mediumDate'}}</a></li>
-                  <li><a><i class="fa fa-phone"></i>{{userInfo.mobile}}</a></li>
-                  <li><a><i class="fa fa-envelope"></i> {{userInfo.email}}</a></li>
-                  <li><a><i class="fa fa-home"></i> {{userInfo.city}} {{userInfo.provience}} {{userInfo.country}}</a>
-                  </li>
-                </ul>
-                <button (click)="edit()" class="float-left btn btn-primary "><i aria-hidden="true"
-                                                                                     class="fa fa-pencil-square-o"></i>Edit
-                  Info
-                </button>
+<div class="container-fluid">
+  <div class="row pr">
+    <div class="profile-bg"></div>
+    <div class="container-fluid col-md-12 col-lg-6 banner-section">
+      <div class="banner_inner d-flex align-items-center">
+        <div class="banner_content ">
+          <div #f='ngForm' *ngIf="!editing" class="personal_text" ngForm>
+            <div *ngIf="userInfo " class="media row">
+              <div class="d-flex col-md-4 ">
+                <app-secured-image [src]="userInfo.profileImage"></app-secured-image>
               </div>
+              <div class="media-body col-md-8">
+                <div class="personal_text">
 
+                  <h3> {{userInfo.name}} {{userInfo.familyName}}
+                  </h3>
+                  <h4>Junior UI/UX Developer</h4>
+                  <p>You will begin to realise why this exercise is called the Dickens Pattern (with reference to the
+                    ghost showing Scrooge some different futures)</p>
+                  <ul class="list basic_infob ">
+                    <li><a><i class="fa fa-calendar"></i> {{userInfo.birthday | date:'mediumDate'}}</a></li>
+                    <li><a><i class="fa fa-phone"></i>{{userInfo.mobile}}</a></li>
+                    <li><a><i class="fa fa-envelope"></i> {{userInfo.email}}</a></li>
+                    <li><a><i class="fa fa-home"></i> {{userInfo.city}} {{userInfo.provience}} {{userInfo.country}}</a>
+                    </li>
+                  </ul>
+                  <button (click)="edit()" class="float-left btn btn-primary "><i aria-hidden="true"
+                                                                                  class="fa fa-pencil-square-o"></i>Edit
+                    Info
+                  </button>
+                </div>
+
+              </div>
             </div>
           </div>
+
+
+          <form #f='ngForm' *ngIf="editing" class="personal_text" ngForm>
+            <div *ngIf="userInfo " class="media row">
+              <div class=" col-md-4  ">
+
+                <app-secured-image [src]="ineditUser.profileImage"></app-secured-image>
+                <div class=" form-group">
+
+                  <input
+                    (change)="processFile($event)"
+                    accept="image/*"
+                    class="form-control"
+                    type="file">
+                  <br>
+                </div>
+
+              </div>
+
+              <div class="media-body col-md-8">
+                <div class="personal_text">
+
+                  <div class="form-group ">
+                    <label>
+                      Name
+                    </label>
+                    <input [(ngModel)]="ineditUser.name" class="form-control" name="name" type="text">
+                    <label>
+                      Family Name
+                    </label>
+                    <input [(ngModel)]="ineditUser.familyName" class="form-control" name="familyName" type="text">
+                  </div>
+                  <div class="form-group">
+                    <label>
+                      Mobile
+                    </label>
+                    <input [(ngModel)]="ineditUser.mobile" class="form-control" name="mobile" type="tel">
+                  </div>
+                  <div class="form-group">
+                    <label>Email</label>
+                    <input [(ngModel)]="ineditUser.email" class="form-control" name="email" type="email">
+                  </div>
+                  <div class="form-group row">
+
+                    <div class="col-md-3"> City</div>
+                    <div class="col-md-9"><input [(ngModel)]="ineditUser.city" class="form-control " name="city"
+                                                 type="text"></div>
+                    <div class="col-md-3"> Province</div>
+                    <div class="col-md-9"><input [(ngModel)]="ineditUser.provience" class="form-control " name="province"
+                                                 type="text"></div>
+                    <div class="col-md-3"> Country</div>
+                    <div class="col-md-9"><input [(ngModel)]="ineditUser.country" class="form-control " name="country"
+                                                 type="text"></div>
+                  </div>
+                  <div class="row">
+                    <div class="col-sm-6 f-but ">
+                      <button (click)="submit()"
+                              class=" btn btn-success "><i aria-hidden="true"
+                                                           class="fa fa-check"></i>Submit
+                      </button>
+                    </div>
+
+                    <div class="col-sm-6 f-but">
+                      <button (click)="cancel()"
+                              class=" btn btn-danger "><i aria-hidden="true"
+                                                          class="fa fa-times"></i>Cancel
+                      </button>
+
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </form>
         </div>
-
-
-        <form #f='ngForm' *ngIf="editing" class="personal_text" ngForm>
-          <div *ngIf="userInfo " class="media row">
-            <div class=" col-md-4  ">
-
-              <app-secured-image [src]="ineditUser.profileImage"></app-secured-image>
-              <div class=" form-group">
-
-                        <input
-                       (change)="processFile($event)"
-                       accept="image/*"
-                       class="form-control"
-                       type="file">
-                <br>
-              </div>
-
-            </div>
-
-            <div class="media-body col-md-8">
-              <div class="personal_text">
-
-                <div class="form-group ">
-                  <label>
-                    Name
-                  </label>
-                  <input [(ngModel)]="ineditUser.name" class="form-control" name="name" type="text">
-                  <label>
-                    Family Name
-                  </label>
-                  <input [(ngModel)]="ineditUser.familyName" class="form-control" name="familyName" type="text">
-                </div>
-                <div class="form-group">
-                  <label>
-                    Mobile
-                  </label>
-                  <input [(ngModel)]="ineditUser.mobile" class="form-control" name="mobile" type="tel">
-                </div>
-                <div class="form-group">
-                  <label>Email</label>
-                  <input [(ngModel)]="ineditUser.email" class="form-control" name="email" type="email">
-                </div>
-                <div class="form-group row">
-
-                  <div class="col-md-3"> City</div>
-                  <div class="col-md-9"><input [(ngModel)]="ineditUser.city" class="form-control " name="city"
-                                               type="text"></div>
-                  <div class="col-md-3"> Province</div>
-                  <div class="col-md-9"><input [(ngModel)]="ineditUser.provience" class="form-control " name="province"
-                                               type="text"></div>
-                  <div class="col-md-3"> Country</div>
-                  <div class="col-md-9"><input [(ngModel)]="ineditUser.country" class="form-control " name="country"
-                                               type="text"></div>
-                </div>
-                <div class="row">
-                  <div class="col-sm-6 f-but ">
-                    <button (click)="submit()"
-                            class=" btn btn-success "><i aria-hidden="true"
-                                                         class="fa fa-check"></i>Submit
-                    </button>
-                  </div>
-
-                  <div class="col-sm-6 f-but">
-                    <button (click)="cancel()"
-                            class=" btn btn-danger "><i aria-hidden="true"
-                                                        class="fa fa-times"></i>Cancel
-                    </button>
-
-                  </div>
-                </div>
-              </div>
-
-            </div>
-          </div>
-        </form>
       </div>
+    </div>
+
+    <!--<div class="container">-->
+    <!--  <div class="row">-->
+    <!--    <div class="col-md-4">-->
+    <!--      -->
+    <!--    </div>-->
+    <!--    <div class="col-md-8">-->
+
+    <!--    </div>-->
+    <!--  </div>-->
+    <!--</div>-->
+    <div class="container-fluid col-md-12 col-lg-6 your-products">
+
+
+
     </div>
   </div>
 
-<!--<div class="container">-->
-<!--  <div class="row">-->
-<!--    <div class="col-md-4">-->
-<!--      -->
-<!--    </div>-->
-<!--    <div class="col-md-8">-->
 
-<!--    </div>-->
-<!--  </div>-->
-<!--</div>-->
-  <div class="container-fluid col-md-12 col-lg-6 your-products">
-
-
-
-</div>
-</div>
 <div class="row">
   <div class="col-12 product-features-heading">
     <h2>Your Registered Products</h2>
@@ -173,4 +176,5 @@
     </div>
   </div>
 
+</div>
 </div>

@@ -144,6 +144,7 @@
 /*  background: #ece8e1;*/
 /*}*/
 #product-tabs{
+  padding-top: 100px;
   position: relative;
 
 }
@@ -204,4 +205,11 @@ a {
 }
 #product-tabs .container-fluid {
   padding: 69px 0;
+}
+@media (max-width: 768px) {
+
+  .product-tab-col{
+    text-align: left !important;
+    padding: 20px ;
+  }
 }

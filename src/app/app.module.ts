@@ -32,6 +32,7 @@ import { SpecComponent } from './components/productPage/product-detail/spec/spec
 import { GoogleMapsModule } from '@angular/google-maps';
 import { AgmCoreModule } from '@agm/core';
 import { AgmMapComponent } from './components/agm-map/agm-map.component';
+import { FormComponent } from './test/form/form.component';
 
 
 @NgModule({
@@ -57,7 +58,8 @@ import { AgmMapComponent } from './components/agm-map/agm-map.component';
     OverviewComponent,
     DownloadComponent,
     SpecComponent,
-    AgmMapComponent
+    AgmMapComponent,
+    FormComponent
 
 
 
@@ -69,7 +71,7 @@ import { AgmMapComponent } from './components/agm-map/agm-map.component';
     FormsModule,
     ReactiveFormsModule,
     AgmCoreModule.forRoot({
-      apiKey: 'AIzaSyAvcDy5ZYc2ujCS6TTtI3RYX5QmuoV8Ffw'
+      apiKey: 'AIzaSyAMjuUPXMzYhs7l4P1XG0vUUQA6eIRkw9k'
     })
   ],
   providers: [AuthService,
